@@ -1,17 +1,17 @@
 "use client";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import styles from "./hero.module.css";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
   const { scrollY } = useScroll(); //0 to 675
-  const transform = useTransform(
+  let transform = useTransform(
     scrollY,
-    [50, 800],
+    [10, 600],
     [
-      "perspective(50px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(3.375deg) rotateY(0deg) translateZ(0px)",
-      "perspective(1200px) translateX(0px) translateY(6px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)",
+      "perspective(50px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(4deg) rotateY(0deg) translateZ(0px)",
+      "perspective(1200px) translateX(0px) translateY(6px) scale(1) rotate(0deg) rotateX(0deg) rotateY(372deg) translateZ(0px)",
     ]
   );
 
@@ -22,7 +22,7 @@ const Hero = () => {
           Shaping digital stories with <br /> creative precision
         </h1>
         <p className={styles.title_description}>
-          <br /> Where every interaction tells a story!
+          <br /> Every interaction tells a story!
         </p>
       </div>
       <motion.div

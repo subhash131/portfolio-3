@@ -7,8 +7,18 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  user-select: text;
+  -moz-user-select: text;
 }
-
+*::-webkit-scrollbar {
+  display: none;
+}
+*::selection {
+  background-color: #feae02;
+  color: #000000;
+}
 :root {
   --white: white;
 }
