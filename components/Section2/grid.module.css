@@ -51,6 +51,9 @@
   background-color: #664d87;
   transform: skew(-20deg) translate(-250px, 10px);
 }
+.grid_item:hover {
+  transform: rotateX(360deg);
+}
 .grid_item:hover .light1 {
   background-color: #664d87;
   transform: skew(-20deg) translate(250px, 10px);

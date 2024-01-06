@@ -49,7 +49,6 @@ const CompaniesGrid = () => {
             <div className={styles.grid_item} key={`${index}:${name}`}>
               <div className={styles.light} />
               <div className={styles.light1} />
-
               <img
                 src={img}
                 className={styles.img}
