@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useId } from "react";
 import styles from "./grid.module.css";
 
 const data = [
@@ -44,9 +44,9 @@ const CompaniesGrid = () => {
         <p>Colabrated with industry gaints</p>
       </div>
       <div className={styles.items}>
-        {data.map(({ img, name, alt }, index) => {
+        {data.map(({ img, alt }) => {
           return (
-            <div className={styles.grid_item} key={`${index}:${name}`}>
+            <div className={styles.grid_item} key={useId()}>
               <div className={styles.light} />
               <img
                 src={img}
